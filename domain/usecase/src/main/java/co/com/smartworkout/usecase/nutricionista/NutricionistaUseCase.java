@@ -1,8 +1,6 @@
 package co.com.smartworkout.usecase.nutricionista;
 
 import co.com.smartworkout.model.nutricionista.Nutricionista;
-import co.com.smartworkout.model.nutricionista.PlanNutricional;
-import co.com.smartworkout.model.nutricionista.ValoracionNutricional;
 import co.com.smartworkout.model.nutricionista.gateways.NutricionistaRepository;
 import lombok.RequiredArgsConstructor;
 
@@ -32,4 +30,5 @@ public class NutricionistaUseCase {
     public List<Nutricionista> consultarTodos() {
         return nutricionistaRepository.consultarTodos();
     }
+
 }

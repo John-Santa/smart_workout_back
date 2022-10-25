@@ -1,8 +1,6 @@
 package co.com.smartworkout.jpa;
 
 import co.com.smartworkout.model.nutricionista.Nutricionista;
-import co.com.smartworkout.model.nutricionista.PlanNutricional;
-import co.com.smartworkout.model.nutricionista.ValoracionNutricional;
 import co.com.smartworkout.model.nutricionista.gateways.NutricionistaRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;

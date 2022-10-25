@@ -11,17 +11,8 @@ import java.util.Date;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Nutricionista {
+public class Nutricionista extends Persona {
 
-    private String id;
-    private String nombre;
-    private String apellido;
-    private String telefono;
-    private Character genero;
-    private String email;
-    private Date fechaNacimiento;
-    private Double peso;
-    private Double estatura;
     private Boolean estado;
     private String sede;
     private String horario;
