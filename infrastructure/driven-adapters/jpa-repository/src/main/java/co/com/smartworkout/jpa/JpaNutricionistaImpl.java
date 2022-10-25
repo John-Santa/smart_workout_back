@@ -12,24 +12,24 @@ import java.util.UUID;
 @AllArgsConstructor
 public class JpaNutricionistaImpl implements NutricionistaRepository {
 
-    private JPARepositoryAdapter jpaRepositoryAdapter;
+    private JPANutricionistaRepositoryAdapter jpaNutricionistaRepositoryAdapter;
 
 
     @Override
     public void crear(Nutricionista nutricionista) {
         String id = UUID.randomUUID().toString();
         nutricionista.setId(id);
-        jpaRepositoryAdapter.save(nutricionista);
+        jpaNutricionistaRepositoryAdapter.save(nutricionista);
     }
 
     @Override
     public Nutricionista consultar(String idNutricionista) {
-        return jpaRepositoryAdapter.findById(idNutricionista);
+        return jpaNutricionistaRepositoryAdapter.findById(idNutricionista);
     }
 
     @Override
     public void actualizar(String id, Nutricionista nutricionista) {
-        Nutricionista nutricionistaConsultado = jpaRepositoryAdapter.findById(id);
+        Nutricionista nutricionistaConsultado = jpaNutricionistaRepositoryAdapter.findById(id);
 
         if (nutricionistaConsultado == null) {
             throw new RuntimeException("No existe el nutricionista");
@@ -47,17 +47,17 @@ public class JpaNutricionistaImpl implements NutricionistaRepository {
         nutricionistaConsultado.setSede(nutricionista.getSede());
         nutricionistaConsultado.setHorario(nutricionista.getHorario());
 
-        jpaRepositoryAdapter.save(nutricionistaConsultado);
+        jpaNutricionistaRepositoryAdapter.save(nutricionistaConsultado);
 
     }
 
     @Override
     public void eliminar(String idNutricionista) {
-        jpaRepositoryAdapter.deleteById(idNutricionista);
+        jpaNutricionistaRepositoryAdapter.deleteById(idNutricionista);
     }
 
     @Override
     public List<Nutricionista> consultarTodos() {
-        return jpaRepositoryAdapter.findAll();
+        return jpaNutricionistaRepositoryAdapter.findAll();
     }
 }

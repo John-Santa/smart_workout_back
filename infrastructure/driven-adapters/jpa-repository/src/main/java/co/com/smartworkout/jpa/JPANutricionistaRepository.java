@@ -4,9 +4,7 @@ import co.com.smartworkout.jpa.entities.NutricionistaEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.QueryByExampleExecutor;
 
-import java.util.Optional;
-
-public interface JPARepository
+public interface JPANutricionistaRepository
         extends CrudRepository<NutricionistaEntity, String>,
                 QueryByExampleExecutor<NutricionistaEntity> {
 
