@@ -1,6 +1,5 @@
 package co.com.smartworkout.jpa.config;
 
-import co.com.smartworkout.jpa.config.DBSecret;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,4 +1,4 @@
-package co.com.smartworkout.model.nutricionista;
+package co.com.smartworkout.model.plannutricional;
 import lombok.Builder;
 import lombok.Data;
 
@@ -8,7 +8,6 @@ import java.util.Date;
 @Builder(toBuilder = true)
 public class ValoracionNutricional {
 
-    private String idPlanNutricional;
     private Date fechaCreacion;
     private double abdomen;
     private double midaxilar;

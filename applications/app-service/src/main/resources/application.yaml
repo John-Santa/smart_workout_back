@@ -17,7 +17,7 @@ spring:
 #    password: "pass"
 #    driverClassName: "org.h2.Driver"
   datasource:
-    url: "jdbc:mysql://localhost:3306/headway"
+    url: jdbc:mysql://localhost:3306/smart_workout
     username: "root"
     password: "Amsterdam123*"
     driverClassName: "com.mysql.cj.jdbc.Driver"

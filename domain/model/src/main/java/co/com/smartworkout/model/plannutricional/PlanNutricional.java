@@ -1,4 +1,4 @@
-package co.com.smartworkout.model.nutricionista;
+package co.com.smartworkout.model.plannutricional;
 import lombok.Builder;
 import lombok.Data;
 
@@ -6,11 +6,12 @@ import lombok.Data;
 @Builder(toBuilder = true)
 public class PlanNutricional {
 
-    private String id;
+    private String idPlanNutricional;
     private String idCliente;
     private String idNutricionista;
     private String objetivoNutricional;
     private Double kiloCaloriasDiarias;
     private String recomendaciones;
+    private ValoracionNutricional valoracionNutricional;
 
 }

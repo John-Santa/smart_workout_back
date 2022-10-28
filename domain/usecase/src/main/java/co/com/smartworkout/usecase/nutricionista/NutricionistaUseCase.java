@@ -4,8 +4,6 @@ import co.com.smartworkout.model.nutricionista.Nutricionista;
 import co.com.smartworkout.model.nutricionista.gateways.NutricionistaRepository;
 import lombok.RequiredArgsConstructor;
 
-import java.util.List;
-
 @RequiredArgsConstructor
 public class NutricionistaUseCase {
 
@@ -19,16 +17,16 @@ public class NutricionistaUseCase {
         return nutricionistaRepository.consultar(idNutricionista);
     }
 
-    public void actualizar(String id, Nutricionista nutricionista) {
+    public void actualizar(String  id, Nutricionista nutricionista) {
         nutricionistaRepository.actualizar(id, nutricionista);
     }
 
-    public void eliminar(String idNutricionista) {
+    public void eliminar(String  idNutricionista) {
         nutricionistaRepository.eliminar(idNutricionista);
     }
 
-    public List<Nutricionista> consultarTodos() {
-        return nutricionistaRepository.consultarTodos();
-    }
+//    public List<Nutricionista> consultarTodos() {
+//        return nutricionistaRepository.consultarTodos();
+//    }
 
 }

@@ -1,12 +1,11 @@
 package co.com.smartworkout.model.persona;
-import lombok.Builder;
+
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
-//@Builder(toBuilder = true)
-public abstract class Persona {
+public class Persona {
 
     private String id;
     private String nombre;
@@ -17,5 +16,8 @@ public abstract class Persona {
     private Date fechaNacimiento;
     private Double peso;
     private Double estatura;
+    private String tipoDocumento;
+    private String numeroDocumento;
+
 
 }

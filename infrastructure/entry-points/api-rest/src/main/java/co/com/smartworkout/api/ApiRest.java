@@ -36,18 +36,17 @@ public class ApiRest {
     }
 
     @DeleteMapping("/nutricionista/{id}")
-    public void eliminarNutricionista(@PathVariable String id) {
+    public void eliminarNutricionista(@PathVariable String  id) {
         nutricionistaUseCase.eliminar(id);
     }
 
-    @GetMapping("/nutricionistas")
-    public List<Nutricionista> getNutricionistas() {
-        return nutricionistaUseCase.consultarTodos();
-    }
+//    @GetMapping("/nutricionistas")
+//    public List<Nutricionista> getNutricionistas() {
+//        return nutricionistaUseCase.consultarTodos();
+//    }
 
     @GetMapping(path = "/hello")
     public String commandName() {
-//      return useCase.doAction();
         return "Hello World";
     }
 }

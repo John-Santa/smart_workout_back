@@ -17,18 +17,16 @@ public class JpaNutricionistaImpl implements NutricionistaRepository {
 
     @Override
     public void crear(Nutricionista nutricionista) {
-        String id = UUID.randomUUID().toString();
-        nutricionista.setId(id);
         jpaNutricionistaRepositoryAdapter.save(nutricionista);
     }
 
     @Override
-    public Nutricionista consultar(String idNutricionista) {
+    public Nutricionista consultar(String  idNutricionista) {
         return jpaNutricionistaRepositoryAdapter.findById(idNutricionista);
     }
 
     @Override
-    public void actualizar(String id, Nutricionista nutricionista) {
+    public void actualizar(String  id, Nutricionista nutricionista) {
         Nutricionista nutricionistaConsultado = jpaNutricionistaRepositoryAdapter.findById(id);
 
         if (nutricionistaConsultado == null) {
@@ -46,6 +44,8 @@ public class JpaNutricionistaImpl implements NutricionistaRepository {
         nutricionistaConsultado.setEstado(nutricionista.getEstado());
         nutricionistaConsultado.setSede(nutricionista.getSede());
         nutricionistaConsultado.setHorario(nutricionista.getHorario());
+        nutricionistaConsultado.setTipoDocumento(nutricionista.getTipoDocumento());
+        nutricionistaConsultado.setNumeroDocumento(nutricionista.getNumeroDocumento());
 
         jpaNutricionistaRepositoryAdapter.save(nutricionistaConsultado);
 
@@ -56,8 +56,8 @@ public class JpaNutricionistaImpl implements NutricionistaRepository {
         jpaNutricionistaRepositoryAdapter.deleteById(idNutricionista);
     }
 
-    @Override
-    public List<Nutricionista> consultarTodos() {
-        return jpaNutricionistaRepositoryAdapter.findAll();
-    }
+//    @Override
+//    public List<Nutricionista> consultarTodos() {
+//        return jpaNutricionistaRepositoryAdapter.findAll();
+//    }
 }

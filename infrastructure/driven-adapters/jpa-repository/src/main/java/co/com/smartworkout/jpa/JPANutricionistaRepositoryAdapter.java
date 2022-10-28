@@ -1,7 +1,6 @@
 package co.com.smartworkout.jpa;
 
 import co.com.smartworkout.jpa.entities.NutricionistaEntity;
-import co.com.smartworkout.jpa.entities.PersonaEntity;
 import co.com.smartworkout.jpa.helper.AdapterOperations;
 import co.com.smartworkout.model.nutricionista.Nutricionista;
 import org.reactivecommons.utils.ObjectMapper;
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Repository;
 public class JPANutricionistaRepositoryAdapter extends AdapterOperations<
         Nutricionista,
         NutricionistaEntity,
-        String,
+        String ,
         JPANutricionistaRepository>
 // implements ModelRepository from domain
 {
