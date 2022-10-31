@@ -13,8 +13,14 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Table(name = "persona")
-@SecondaryTable(name = "nutricionista", pkJoinColumns = @PrimaryKeyJoinColumn(name = "id_nutricionista", referencedColumnName = "id"))
-public class NutricionistaEntity {
+@SecondaryTable(name = "cliente", pkJoinColumns = @PrimaryKeyJoinColumn(name = "id_cliente", referencedColumnName = "id"))
+public class ClienteEntity {
+
+
+    @Column(table = "cliente")
+    private String objetivo;
+    @Column(name = "frecuencia_entrenamiento", table = "cliente")
+    private String frecuenciaEntrenamiento;
 
     @Id
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
@@ -34,12 +40,4 @@ public class NutricionistaEntity {
     private String tipoDocumento;
     @Column(name = "numero_documento")
     private String numeroDocumento;
-
-
-    @Column(table = "nutricionista")
-    private Boolean estado;
-    @Column(table = "nutricionista")
-    private String sede;
-    @Column(table = "nutricionista")
-    private String horario;
 }

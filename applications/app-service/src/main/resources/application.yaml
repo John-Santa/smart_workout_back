@@ -5,24 +5,38 @@ spring:
     name: "headway"
   devtools:
     add-properties: false
-#  h2:
-#    console:
-#      enabled: true
-#      path: "/h2"
-#  profiles:
-#    include: null
-#  datasource:
-#    url: "jdbc:h2:mem:test"
-#    username: "sa"
-#    password: "pass"
-#    driverClassName: "org.h2.Driver"
+  ## Conexion para postgresql, crear si no existe
+
   datasource:
-    url: jdbc:mysql://localhost:3306/smart_workout
-    username: "root"
-    password: "Amsterdam123*"
-    driverClassName: "com.mysql.cj.jdbc.Driver"
+      url: jdbc:postgresql://localhost:5432/smart_workout
+      username: postgres
+      password: ""
+      driverClassName: org.postgresql.Driver
   jpa:
-    databasePlatform: "org.hibernate.dialect.H2Dialect"
+    databasePlatform: "org.hibernate.dialect.PostgreSQLDialect"
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+  #  h2:
+  #    console:
+  #      enabled: true
+  #      path: "/h2"
+  #  profiles:
+  #    include: null
+  #  datasource:
+  #    url: "jdbc:h2:mem:test"
+  #    username: "sa"
+  #    password: "pass"
+  #    driverClassName: "org.h2.Driver"
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/smart_workout?createDatabaseIfNotExist=true
+#    username: "root"
+#    password: "Amsterdam123*"
+#    driverClassName: "com.mysql.cj.jdbc.Driver"
+#  jpa:
+#    databasePlatform: "org.hibernate.dialect.H2Dialect"
 management:
   endpoints:
     web:

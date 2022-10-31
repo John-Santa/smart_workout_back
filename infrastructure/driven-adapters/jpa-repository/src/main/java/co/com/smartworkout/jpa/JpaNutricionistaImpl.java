@@ -5,9 +5,6 @@ import co.com.smartworkout.model.nutricionista.gateways.NutricionistaRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
-import java.util.UUID;
-
 @Component
 @AllArgsConstructor
 public class JpaNutricionistaImpl implements NutricionistaRepository {
@@ -22,7 +19,9 @@ public class JpaNutricionistaImpl implements NutricionistaRepository {
 
     @Override
     public Nutricionista consultar(String  idNutricionista) {
-        return jpaNutricionistaRepositoryAdapter.findById(idNutricionista);
+        Nutricionista nutricionista = jpaNutricionistaRepositoryAdapter.findById(idNutricionista);
+        nutricionista.setId(idNutricionista);
+        return nutricionista;
     }
 
     @Override

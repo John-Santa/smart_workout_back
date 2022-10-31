@@ -1,5 +1,5 @@
-create database smart_workout
-Use smart_workout
+create database smartworkout
+Use smartworkout
 
 
 create table persona
